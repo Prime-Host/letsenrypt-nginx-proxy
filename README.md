@@ -10,7 +10,7 @@ docker pull jrcs/letsencrypt-nginx-proxy-companion
 
 
 ```bash
-$ docker run -d -p 80:80 -p 443:443 \
+docker run -d -p 80:80 -p 443:443 \
     --name nginx-proxy \
     --restart=always \
     -v /var/docker-data/certs:/etc/nginx/certs:ro \
@@ -22,7 +22,7 @@ $ docker run -d -p 80:80 -p 443:443 \
 
 
 ```bash
-$ docker run -d \
+docker run -d \
     --name letsenrypt \
     --restart=always \
     -v /var/docker-data/certs:/etc/nginx/certs:rw \
