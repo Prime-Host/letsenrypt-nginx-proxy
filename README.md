@@ -2,7 +2,7 @@
 
 Run these 2 commans to start the containers.
 
-
+```bash
 $ docker run -d -p 80:80 -p 443:443 \
     --name nginx-proxy \
     --restart=always
@@ -11,7 +11,10 @@ $ docker run -d -p 80:80 -p 443:443 \
     -v /usr/share/nginx/html \
     -v /var/run/docker.sock:/tmp/docker.sock:ro \
     jwilder/nginx-proxy
+```
 
+
+```bash
 $ docker run -d \
     --name letsenrypt
     --restart=always
@@ -19,3 +22,4 @@ $ docker run -d \
     --volumes-from nginx-proxy \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     jrcs/letsencrypt-nginx-proxy-companion
+```
