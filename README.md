@@ -1,6 +1,13 @@
 # letsenrypt-nginx-proxy
 
-Run these 2 commans to start the containers.
+Run these commands to start the containers.
+
+
+```bash
+docker pull jwilder/nginx-proxy
+docker pull jrcs/letsencrypt-nginx-proxy-companion
+```
+
 
 ```bash
 $ docker run -d -p 80:80 -p 443:443 \
