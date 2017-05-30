@@ -9,7 +9,7 @@ docker pull jwilder/docker-gen
 docker pull jrcs/letsencrypt-nginx-proxy-companion
 ```
 
-Clone the Repo and start all Containers.
+Clone the Repo and start all containers.
 
 ```bash
 git clone https://github.com/Prime-Host/letsenrypt-nginx-proxy.git
