@@ -10,5 +10,7 @@ docker pull jrcs/letsencrypt-nginx-proxy-companion
 ```
 
 ```bash
-docker compose up -d
+git clone https://github.com/Prime-Host/letsenrypt-nginx-proxy.git
+docker-compose -f letsenrypt-nginx-proxy/docker-compose.yml up -d
+rm -r letsenrypt-nginx-proxy
 ```
