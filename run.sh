@@ -6,7 +6,7 @@
 #
 
 # 1. mv sample to .env
-mv .env.sample .env
+mv env-sample .env
 
 # 2. Create docker network
 docker network create $NETWORK
