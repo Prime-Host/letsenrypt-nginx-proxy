@@ -12,7 +12,7 @@ DOCKER_GEN=nginx-gen
 LETS_ENCRYPT=nginx-letsencrypt
 
 # Your external IP address
-IP=$MY_EXTERNAL_IP
+IP=0.0.0.0
 
 # Network name
 NETWORK=webproxy
