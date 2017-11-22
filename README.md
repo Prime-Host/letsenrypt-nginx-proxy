@@ -12,7 +12,5 @@ docker pull jrcs/letsencrypt-nginx-proxy-companion
 Clone the Repo and start all containers.
 
 ```bash
-git clone https://github.com/Prime-Host/letsenrypt-nginx-proxy.git
-docker-compose -f letsenrypt-nginx-proxy/docker-compose.yml up -d
-rm -r letsenrypt-nginx-proxy
+MY_EXTERNAL_IP=$(ip addr show eth0 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}')
 ```
