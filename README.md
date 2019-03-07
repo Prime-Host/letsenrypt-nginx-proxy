@@ -22,5 +22,6 @@ git clone https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-c
 mv .env.sample .env
 PROXY_IP_DOCKER=$(ip addr show ens18 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}')
 sed -i "s/0.0.0.0/$PROXY_IP_DOCKER/g" .env
+sed -i "s:./nginx-data:/var/docker-data/proxy:g" .env
 ./start.sh
 ```
