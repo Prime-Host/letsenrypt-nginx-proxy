@@ -19,6 +19,7 @@ To start all containers run this script:
 
 ```bash
 git clone https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion.git
+cd docker-compose-letsencrypt-nginx-proxy-companion
 mv .env.sample .env
 PROXY_IP_DOCKER=$(ip addr show ens18 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}')
 sed -i "s/0.0.0.0/$PROXY_IP_DOCKER/g" .env
